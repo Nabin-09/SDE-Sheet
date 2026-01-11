@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt" , "r" , stdin);
+    freopen("output.txt" , "w" , stdout);
+    #endif
+    int t ;
+    cin >> t;
+    while(t--){
+        int n;
+        cin >> n ;
+        string s;
+        cin >> s;
+        bool ans = true;
+        if(s.size() < 4) cout <<"0\n";
+        else {
+            for(int i = 0 ; i < n - 3 ; i++){
+                if(s[i] == '2' && s[i+1] == '0' &&
+                s[i+2] == '2' && s[i + 3] == '5') ans = false;
+                else if(s[i] == '2' && s[i+1] == '0' &&
+                s[i+2] == '2' && s[i + 3] == '6'){
+                    ans = true;
+                    break;
+                }
+            }
+            if(ans) cout <<"0\n";
+            else cout <<"1\n";
+        }
+    }
+   return 0;
+}

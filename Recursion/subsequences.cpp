@@ -8,7 +8,7 @@ void solve(string& s , string& op , int idx , vector<string>& ans){
     }
 
     solve(s , op , idx + 1 , ans);
-    char ch = s[idx];
+    char ch = s[idx]; 
     op.push_back(ch);
     solve(s , op , idx + 1, ans);
     op.pop_back();//backtrack
